@@ -6,6 +6,14 @@ async function pageLoaded() {
   console.dir(json)
   
   // 🔥 start here: write code to loop through the rides
+
+  for (let i = 0; i < json.length; i++){
+    ride = json[i]
+    console.log(`Hi${json}`)
+  }
+
+  let outputElement = document.querySelector(".rides")
+ 
   
 }
 
