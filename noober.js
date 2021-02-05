@@ -5,6 +5,7 @@ async function pageLoaded() {
   // writes the returned JSON to the console
   console.dir(json)
 
+  // 📝 Below is Level Of service Logic-- not sure where this belongs 
   if (ride.length > 1) {
     levelOfService = 'Noober Pool'
   } else if (ride[0].purpleRequested) {
@@ -15,7 +16,7 @@ async function pageLoaded() {
     levelOfService = 'Noober X'
   }
   
-  
+  // 📝 Tons of rides in data .. Loop structure is best to use. it will auto run as many times = to data items present 📝 
   // 🔥 start here: write code to loop through the rides
 
   for (let i = 0; i < json.length; i++){
@@ -31,7 +32,7 @@ async function pageLoaded() {
 window.addEventListener('DOMContentLoaded', pageLoaded)
 
 
-
+//  📝 Setting variables📝 
 // passenger1Name = `${ride[0].passengerDetails.first} ${ride[0].passengerDetails.last}`
 // passenger1Phone = ride[0].passengerDetails.phoneNumber
 // passenger1NumberOfPassengers = ride[0].numberOfPassengers
@@ -40,6 +41,7 @@ window.addEventListener('DOMContentLoaded', pageLoaded)
 // passenger1DropoffAddressLine1 = ride[0].dropoffLocation.address
 // passenger1DropoffAddressLine2 = `${ride[0].dropoffLocation.city}, ${ride[0].dropoffLocation.state} ${ride[0].dropoffLocation.zip}`
 
+// 📝 Ride Logic - What data to pull based on ride criteria📝 
 // if (ride.length > 1) {
 //   passenger2Name = `${ride[1].passengerDetails.first} ${ride[1].passengerDetails.last}`
 //   passenger2Phone = ride[1].passengerDetails.phoneNumber
